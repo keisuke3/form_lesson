@@ -14,6 +14,58 @@
   font-size: 12px;
 }
 
+.input-common {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 0;
+}
+
+.input-area {
+  color: #545658;
+  box-sizing: border-box;
+  font-size: 13px;
+  height: 36px;
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  line-height: 2;
+  background-color: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+}
+
+.input-area:focus {
+  background-color: #fff;
+  border-color: rgba(59, 133, 133, .4);
+  box-shadow: 0 0 0 2px rgba(1, 191, 189, .1);
+}
+
+.label-text {
+  font-size: 12px;
+  color: #545658;
+}
+
+.required {
+  color: #dd4b39;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 /*--- リンク ---*/
 .link-color {
   color: #01a6a4;
@@ -129,6 +181,186 @@
 /*--- form part ---*/
 .form-content {
   margin-top: 20px;
+}
+
+/*--- name ---*/
+.name-area {
+  display: flex;
+}
+
+.first-name {
+  margin-left: 16px;
+}
+
+/*--- gender ---*/
+.gender {
+  margin-top: 20px;
+}
+
+.gender-contents {
+  color: #545658;
+  font-size: 0;
+  margin-top: 5px;
+}
+
+.gender-content:not(:first-child) {
+  margin-left: 15px;
+}
+
+.gender-content span {
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  padding: 3px 3px 3px 20px;
+  display: inline-block;
+}
+
+.gender-content span::before {
+  content: '';
+  background-color: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 14px;
+  width: 14px;
+}
+
+.gender-input:checked + span::after {
+  background-color: #01bfbd;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
+
+.gender-input:focus-visible ~ span {
+  text-decoration: underline solid rgba(59, 133, 133, .6);
+  text-underline-offset: 2px;
+}
+
+/*--- origin ---*/
+.origin {
+  margin-top: 20px;
+}
+
+.origin-select {
+  margin-top: 8px;
+  position: relative;
+}
+
+.origin-select::after {
+  content: '';
+  border-right: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  top: 45%;
+  right: 10px;
+  transform: rotate(45deg);
+}
+
+.origin-input {
+  margin-top: 0;
+}
+
+/*--- email --- */
+.email {
+  margin-top: 20px;
+}
+
+/*--- telephone ---*/
+.telephone {
+  margin-top: 20px;
+}
+
+/*--- password ---*/
+.password {
+  margin-top: 20px;
+}
+
+/*--- course ---*/
+.course {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-label {
+  color: #545658;
+  align-self: flex-start;
+  position: relative;
+  padding-left: 25px;
+  margin-top: 10px;
+}
+
+.course-label:nth-of-type(1) {
+  margin-top: 5px;
+}
+
+.course-label span::before {
+  content: '';
+  border: 1px solid #d9d9d9;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.course-input:checked + span::after {
+  content: '';
+  border-right: 3px solid #01bfbd;
+  border-bottom: 3px solid #01bfbd;
+  height: 16px;
+  width: 8px;
+  position: absolute;
+  top: -4px;
+  left: 6px;
+  transform: rotate(45deg);
+}
+
+.course-input:focus-visible ~ span {
+  text-decoration: underline solid rgba(59, 133, 133, .6);
+  text-underline-offset: 2px;
+}
+
+/*--- remarks ---*/
+.remarks {
+  margin-top: 20px;
+}
+
+.remarks-input {
+  height: 100px;
+}
+
+/*--- submit ---*/
+.submit {
+  margin-top: 20px;
+}
+
+.submit-button {
+  padding: 13px;
+  background-color: #01bfbd;
+  color: #fff;
+  border: 1px solid #01bfbd;
+}
+
+.submit-button:hover {
+  background-color: #01a6a4;
+}
+
+.submit-button:active {
+  background-color: #fff;
+  color: #01a6a4;
+  border-color: #d9d9d9;
 }
 
 /*--- 利用規約 ---*/

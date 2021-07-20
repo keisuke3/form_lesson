@@ -30,6 +30,92 @@
             <!--
               ここに続きのHTMLを書いていきましょう
             -->
+            <div class="name-area">
+              <div class="last-name is-halfWidth">
+                <p class="label-text">名字<span class="required"> ※</span></p>
+                <input type="text" name="last-name" class="input-common input-area" required>
+              </div>
+              <div class="first-name is-halfWidth">
+                <p class="label-text">名前<span class="required"> ※</span></p>
+                <input type="text" name="first-name" class="input-common input-area" required>
+              </div>
+            </div>
+            <div class="gender">
+              <p class="label-text">性別</p>
+              <div class="gender-contents">
+                <label class="gender-content">
+                  <input type="radio" name="gender" value="male" class="visually-hidden gender-input">
+                  <span>男性</span>
+                </label>
+                <label class="gender-content">
+                  <input type="radio" name="gender" value="female" class="visually-hidden gender-input">
+                  <span>女性</span>
+                </label>
+                <label class="gender-content">
+                  <input type="radio" name="gender" value="other" class="visually-hidden gender-input">
+                  <span>その他</span>
+                </label>
+              </div>
+            </div>
+            <div class="origin is-halfWidth">
+              <p class="label-text">出身</p>
+              <div class="origin-select">
+                <select name="origin" id="origin" class="input-common input-area origin-input">
+                  <option value="東京">東京</option>
+                  <option value="千葉">千葉</option>
+                  <option value="埼玉">埼玉</option>
+                  <option value="神奈川">神奈川</option>
+                </select>
+              </div>
+            </div>
+            <div class="email">
+              <p class="label-text">Eメール<span class="required"> ※</span></p>
+              <input
+                type="email"
+                name="email"
+                placeholder="ex) hoge@example.com"
+                required
+                class="input-common input-area is-fullWidth"
+              >
+            </div>
+            <div class="telephone">
+              <p class="label-text">電話番号</p>
+              <input type="tel" name="tel" placeholder="ex) 09012345678" class="input-common input-area is-fullWidth">
+            </div>
+            <div class="password">
+              <p class="label-text">パスワード<span class="required"> ※</span></p>
+              <input type="password" name="password" required class="input-common input-area is-fullWidth">
+            </div>
+            <div class="password">
+              <p class="label-text">パスワード(確認用)<span class="required"> ※</span></p>
+              <input type="password" name="password-confirm" required class="input-common input-area is-fullWidth">
+            </div>
+            <div class="course">
+              <p class="label-text">希望コース</p>
+              <label class="course-label">
+                <input type="checkbox" name="course" value="frontend" class="visually-hidden course-input">
+                <span>フロントエンド</span>
+              </label>
+              <label class="course-label">
+                <input type="checkbox" name="course" value="backend" class="visually-hidden course-input">
+                <span>バックエンド</span>
+              </label>
+              <label class="course-label">
+                <input type="checkbox" name="course" value="app" class="visually-hidden course-input">
+                <span>アプリ</span>
+              </label>
+            </div>
+            <div class="remarks">
+              <p class="label-text">備考</p>
+              <textarea
+                name="remarks"
+                placeholder="何かあればご記入ください"
+                class="input-common input-area remarks-input is-fullWidth"
+              ></textarea>
+            </div>
+            <div class="submit">
+              <input type="submit" value="アカウント作成" class="button is-fullWidth submit-button">
+            </div>
             <p class="agreement">アカウントを作成することにより、<a class="link-color" href>利用規約</a>と<a class="link-color" href>プライバシーポリシー</a>に同意するものとします。</p>
           </form>
         </div>
